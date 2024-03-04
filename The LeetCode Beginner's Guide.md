@@ -184,8 +184,36 @@ Output: 17
 
 #### Solution
 
-```c++
+Calculate the sum of the number of assets held by each customer in each bank, and return the maximum value of the total amount of these assets.
 
+- Time complexity:
+
+​	*O(mn)* - *m* is the line number of accountsaccounts*accounts*, *n* is the column number of accountsaccounts*accounts*.
+
+- Space complexity: *O(1)*
+
+```c++
+class Solution {
+public:
+    int maximumWealth(vector<vector<int>>& accounts) {
+        int n = accounts.size();
+        int m = accounts[0].size();
+        int money[n];
+        int max = 0;
+        for(int i = 0; i < n; i++) {
+            money[i] = 0;
+            for(int j = 0; j < m; j++) {
+                money[i] = accounts[i][j] + money[i];
+            }
+        }
+        for(int i = 0; i < n; i++) {
+            if(max < money[i]){
+                max = money[i];
+            }
+        }
+        return max;
+    }
+};
 ```
 
 ###  [412. Fizz Buzz](https://leetcode.com/problems/fizz-buzz/)
