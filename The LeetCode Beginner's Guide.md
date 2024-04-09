@@ -1,5 +1,3 @@
-
-
 # The LeetCode Beginner's Guide（Attemped）
 
 [toc]
@@ -146,7 +144,7 @@ public:
 };
 ```
 
-### [1672. Richest Customer Wealth](https://leetcode.com/problems/richest-customer-wealth/) - Attempted
+### [1672. Richest Customer Wealth](https://leetcode.com/problems/richest-customer-wealth/)
 
 You are given an `m x n` integer grid `accounts` where `accounts[i][j]` is the amount of money the `ith` customer has in the `jth` bank. Return *the **wealth** that the richest customer has.*
 
@@ -215,6 +213,22 @@ public:
     }
 };
 ```
+
+#### Note - Initialize c++ array
+
+[c++.com reference](https://cplusplus.com/doc/tutorial/arrays/)
+
+```c++
+type name [elements];
+
+//ex 1: 
+int a[5] = {}; // all elements will be initialized as 0
+
+//ex 2:
+int a[n] = {}; //error: variable-element can not be initialized
+```
+
+
 
 ###  [412. Fizz Buzz](https://leetcode.com/problems/fizz-buzz/)
 
